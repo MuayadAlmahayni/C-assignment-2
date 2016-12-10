@@ -56,8 +56,9 @@ int main() {
 			line = end;
 		}
 
-		Meeting meeting(name, description, start, end);
-		meeting.output();
+		//Meeting meeting(name, description, start, end);
+		//meeting.output();
+
 	}
 
 
