@@ -5,7 +5,6 @@ Meeting::Meeting(string Location, string Attendees, string Start, string End)
 	: location(Location), attendees(Attendees), TimeAllocation(Start, End)
 {
 
-	
 }
 
 

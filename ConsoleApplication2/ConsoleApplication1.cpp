@@ -8,9 +8,17 @@
 
 int main() {
 
-	//string fileName;
-	//std::cin >> fileName;
-	std::fstream fs("text.txt", std::fstream::in);
+	string filePath;
+	cout << "Enter file path:" << endl;
+	std::cin >> filePath;
+	std::fstream fs(filePath, std::fstream::in);
+
+	if (!fs.is_open()) {
+		cout << "Incorrect directory, or file does not exist." << endl;
+	}
+	else {
+		cout << "File Opened successfully." << endl;
+		 }
 
 	std::string name, description, start, end, compare;
 
@@ -40,11 +48,10 @@ int main() {
 
 		if (compare == "Meeting")
 		{
-
 			std::string line;
 
 			getline(fs, line, '#');
-			line = name;
+			name = compare;
 
 			getline(fs, line, '#');
 			line = description;
