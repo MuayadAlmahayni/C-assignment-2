@@ -4,8 +4,11 @@ class WorkDone:
 	public TimeAllocation
 {
 public:
-	WorkDone();
+	WorkDone(string, string, string, string);
 	~WorkDone();
 	string note;
+	string name;
+	string WorkDone::details();
+	string WorkDone::output();
 };
 

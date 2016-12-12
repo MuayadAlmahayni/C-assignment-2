@@ -14,10 +14,10 @@ Project::~Project()
 string Project::details() {
 
 	ostringstream oss;
-	oss << "Name: " << name << "\n"
+	oss << name << ":" << "\n"
 		<< "Description: " << description << "\n"
 		<< "Start Date: " << getStart() << "\n"
-		<< "End Date: " << getEnd() << "\n";
+		<< "End Date: " << getEnd() << "\n" << endl;
 	return oss.str();
 }
 

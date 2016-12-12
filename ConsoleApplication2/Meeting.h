@@ -11,7 +11,7 @@ public:
 	std::string output();
 
 private:
-	string location;
+	string name;
 	string attendees;
 };
 

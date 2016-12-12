@@ -9,8 +9,6 @@ public:
 	~Project();
 	string name;
 	string description;
-	DateTime start;
-	DateTime deadline;
 	std::string output();
 	std::string details();
 };
