@@ -2,7 +2,7 @@
 
 
 Project::Project(string Name, string Description, string Start, string End)
-	: name(Name), description(Description), TimeAllocation(Start, End)
+	: name(Name), description(Description), TimeAllocation(Start, End), timed1(Start), timed2(End)
 {
 }
 
@@ -24,5 +24,7 @@ string Project::details() {
 std::string Project::output()
 {
 	std::cout << details();
+	TimeDifference difference(timed1, timed2);
+	difference.getdate();
 	return "This is for Project";
 }

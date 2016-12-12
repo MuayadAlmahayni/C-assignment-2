@@ -1,5 +1,6 @@
 #pragma once
 #include "DateTime.h"
+#include "TimeDifference.h"
 
 class TimeAllocation
 {

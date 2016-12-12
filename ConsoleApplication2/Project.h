@@ -11,6 +11,7 @@ public:
 	string description;
 	std::string output();
 	std::string details();
-
+	string timed1;
+	string timed2;
 };
 

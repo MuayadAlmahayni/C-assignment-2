@@ -152,6 +152,7 @@
     <ClInclude Include="Project.h" />
     <ClInclude Include="Testing.h" />
     <ClInclude Include="TimeAllocation.h" />
+    <ClInclude Include="TimeDifference.h" />
     <ClInclude Include="WorkDone.h" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,7 @@
     <ClCompile Include="Project.cpp" />
     <ClCompile Include="Testing.cpp" />
     <ClCompile Include="TimeAllocation.cpp" />
+    <ClCompile Include="TimeDifference.cpp" />
     <ClCompile Include="WorkDone.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
