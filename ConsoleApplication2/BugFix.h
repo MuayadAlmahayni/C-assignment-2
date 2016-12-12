@@ -4,9 +4,11 @@ class BugFix:
 	public TimeAllocation
 {
 public:
-	BugFix();
+	BugFix(string, string, string, string);
 	~BugFix();
-	int ID;
+	string name;
 	string fixNote;
+	string BugFix::details();
+	string BugFix::output();
 };
 

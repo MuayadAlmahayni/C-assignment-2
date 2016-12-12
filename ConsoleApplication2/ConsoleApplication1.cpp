@@ -3,6 +3,7 @@
 #include "Project.h"
 #include "Meeting.h"
 #include "WorkDone.h"
+#include "BugFix.h"
 #include <iostream>
 #include <string>
 
@@ -24,7 +25,7 @@ int main() {
 
 	std::string name, description, start, end, compare;
 
-	cout << '\n' << "===== C++ Application Assignment =====" << '\n' << endl;
+	cout << '\n' << "======== C++ Application Assignment ========" << '\n' << endl;
 
 	do {
 		char ch = fs.get();
@@ -106,8 +107,37 @@ int main() {
 		}
 	} while (compare != "WorkDone");
 
+	compare = "";
+
+	do {
+		char ch = fs.get();
+		compare += ch;
+
+		if (compare == "BugFix")
+		{
+			std::string line;
+
+			getline(fs, line, '#');
+			name = compare;
+
+			getline(fs, line, '#');
+			description = line;
+
+			getline(fs, line, '#');
+			start = line;
+
+			getline(fs, line, '\n');
+			end = line;
+
+			BugFix bugfix(name, description, start, end);
+			bugfix.output();
+		}
+	} while (compare != "BugFix");
+
+	cout << "===============================================";
+
 	std::string str1;
-	cin >> str1;
+	std::cin >> str1;
 
 
 
