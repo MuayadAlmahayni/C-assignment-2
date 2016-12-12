@@ -20,10 +20,10 @@ string Meeting::details() {
 		<< "Start Date: " << getStart() << "\n"
 		<< "End Date: " << getEnd() << "\n";
 	return oss.str();
-};
+}
 
 std::string Meeting::output()
 {
 	std::cout << details();
-	return NULL;
+	return "This is for Meeting";
 }

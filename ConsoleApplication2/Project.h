@@ -1,7 +1,8 @@
 #pragma once
 #include "TimeAllocation.h"
 
-class Project
+class Project :
+	public TimeAllocation
 {
 public:
 	Project(string, string, string, string);
@@ -10,6 +11,7 @@ public:
 	string description;
 	DateTime start;
 	DateTime deadline;
-	std::string details() { return NULL; };
+	std::string output();
+	std::string details();
 };
 

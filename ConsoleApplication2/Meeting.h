@@ -9,11 +9,9 @@ public:
 	~Meeting();
 	string details();
 	std::string output();
-	string location;
-	string attendees;
 
 private:
-	//string location;
-	//string attendees;
+	string location;
+	string attendees;
 };
 

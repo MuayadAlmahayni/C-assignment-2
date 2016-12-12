@@ -12,6 +12,7 @@ int main() {
 	cout << "Enter file path:" << endl;
 	std::cin >> filePath;
 	std::fstream fs(filePath, std::fstream::in);
+	std::string test;
 
 	if (!fs.is_open()) {
 		cout << "Incorrect directory, or file does not exist." << endl;
@@ -22,8 +23,7 @@ int main() {
 
 	std::string name, description, start, end, compare;
 
-	while (fs.peek() != '#')
-	{
+	do {
 		char ch = fs.get();
 		compare += ch;
 
@@ -32,19 +32,27 @@ int main() {
 			std::string line;
 
 			getline(fs, line, '#');
+			name = compare;
 
-			std::stringstream ss;
-			ss << line;
+			getline(fs, line, '#');
+			description = line;
 
-			ss >> name;
-			ss >> description;
-			ss >> start;
-			ss >> end;
+			getline(fs, line, '#');
+			start = line;
+
+			getline(fs, line, '\n');
+			end = line;
 
 			Project project(name, description, start, end);
-
-
+			project.output();
 		}
+	} while (compare != "Project");
+
+	compare = "";
+
+	do {
+		char ch = fs.get();
+		compare += ch;
 
 		if (compare == "Meeting")
 		{
@@ -54,19 +62,20 @@ int main() {
 			name = compare;
 
 			getline(fs, line, '#');
-			line = description;
+			description = line;
 
 			getline(fs, line, '#');
-			line = start;
+			start = line;
 
 			getline(fs, line, '#');
-			line = end;
+			end = line;
+
+			Meeting meeting(name, description, start, end);
+			meeting.output();
+			std::string str1;
+			cin >> str1;
 		}
-
-		//Meeting meeting(name, description, start, end);
-		//meeting.output();
-
-	}
+	} while (compare != "Meeting");
 
 
 
