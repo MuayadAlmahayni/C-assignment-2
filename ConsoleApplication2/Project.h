@@ -11,5 +11,6 @@ public:
 	string description;
 	std::string output();
 	std::string details();
+
 };
 

@@ -24,5 +24,5 @@ string BugFix::details() {
 std::string BugFix::output()
 {
 	std::cout << details();
-	return "This is for Meeting";
+	return "This is for BugFix";
 }
