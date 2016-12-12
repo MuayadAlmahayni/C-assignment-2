@@ -10,5 +10,7 @@ public:
 	string name;
 	string WorkDone::details();
 	string WorkDone::output();
+	string timed1;
+	string timed2;
 };
 

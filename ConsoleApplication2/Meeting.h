@@ -9,6 +9,8 @@ public:
 	~Meeting();
 	string details();
 	std::string output();
+	string timed1;
+	string timed2;
 
 private:
 	string name;

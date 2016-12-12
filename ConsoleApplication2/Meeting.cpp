@@ -2,7 +2,7 @@
 
 
 Meeting::Meeting(string Name, string Attendees, string Start, string End)
-	: name(Name), attendees(Attendees), TimeAllocation(Start, End)
+	: name(Name), attendees(Attendees), TimeAllocation(Start, End), timed1(Start), timed2(End)
 {
 
 }
@@ -25,5 +25,7 @@ string Meeting::details() {
 std::string Meeting::output()
 {
 	std::cout << details();
+	TimeDifference difference(timed1, timed2);
+	difference.getdate();
 	return "This is for Meeting";
 }

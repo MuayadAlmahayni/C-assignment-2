@@ -10,5 +10,7 @@ public:
 	std::string output();
 	string name;
 	string testDescription;
+	string timed1;
+	string timed2;
 };
 

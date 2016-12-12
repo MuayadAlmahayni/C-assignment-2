@@ -21,12 +21,10 @@ void TimeDifference::getdate()
 	istringstream iss2(date1);
 	char dump;
 	iss2 >> day1 >> dump >> month1 >> dump >> year1 >> hour1 >> dump >> minute1;
-	cout << '\n' << day1 << '\n' << month1 << '\n' << year1 << '\n' << hour1 << '\n' << minute1;
 
 	istringstream iss3(date2);
 	char dump2;
 	iss3 >> day2 >> dump2 >> month2 >> dump2 >> year2 >> hour2 >> dump2 >> minute2;
-	cout << '\n' << day2 << '\n' << month2 << '\n' << year2 << '\n' << hour2 << '\n' << minute2;
 
 	day1 = day1 * 1440;
 	month1 = month1 * 34800;

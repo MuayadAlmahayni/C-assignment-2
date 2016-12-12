@@ -10,5 +10,7 @@ public:
 	string fixNote;
 	string BugFix::details();
 	string BugFix::output();
+	string timed1;
+	string timed2;
 };
 

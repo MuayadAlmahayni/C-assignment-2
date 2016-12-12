@@ -2,7 +2,7 @@
 
 
 BugFix::BugFix(string Name, string FixNote, string Start, string End)
-	: name(Name), fixNote(FixNote), TimeAllocation(Start, End)
+	: name(Name), fixNote(FixNote), TimeAllocation(Start, End), timed1(Start), timed2(End)
 {
 }
 
@@ -24,5 +24,7 @@ string BugFix::details() {
 std::string BugFix::output()
 {
 	std::cout << details();
+	TimeDifference difference(timed1, timed2);
+	difference.getdate();
 	return "This is for BugFix";
 }

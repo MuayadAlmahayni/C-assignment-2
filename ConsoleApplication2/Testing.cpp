@@ -3,7 +3,7 @@
 
 
 Testing::Testing(string Name, string TestDescription, string Start, string End)
-	: name(Name), testDescription(TestDescription), TimeAllocation(Start, End)
+	: name(Name), testDescription(TestDescription), TimeAllocation(Start, End), timed1(Start), timed2(End)
 {
 }
 
@@ -25,5 +25,7 @@ string Testing::details() {
 std::string Testing::output()
 {
 	std::cout << details();
+	TimeDifference difference(timed1, timed2);
+	difference.getdate();
 	return "This is for Meeting";
 }
